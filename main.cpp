@@ -37,7 +37,6 @@ int main(){
  umaConta.cpf ="123.456.789-78";
  umaConta.saldo = 2000;
  umaConta.depositar( 10000);
- umaConta.sacar( 2000);
  std::cout << " O saldo da conta é: " <<  umaConta.saldo <<  std::endl;
  return 0;
 }
