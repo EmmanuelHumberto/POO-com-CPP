@@ -1,0 +1,3 @@
+/home/ss/OOP CpulsPlus/cmake-build-debug/CMakeFiles/OOP_CpulsPlus.dir
+/home/ss/OOP CpulsPlus/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ss/OOP CpulsPlus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
