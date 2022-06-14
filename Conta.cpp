@@ -1,11 +1,15 @@
 #include "Conta.hpp"
 #include <iostream>
 
+int Conta::numeroDeContas = 0;
+
 Conta::Conta( std::string numeroDaConta, std::string numCpf, std::string titular ):
     numeroDaConta(numeroDaConta),
     numCpf(numCpf),
     titular(titular),
-    saldo(0) {
+    saldo(0)
+{
+    numeroDeContas++;
 }
 
 void Conta::sacar( float valorASacar ) {
@@ -41,4 +45,7 @@ std::string Conta::obetemCpf() const {
 }
 float Conta::obtemSaldo() const {
     return saldo;
+}
+int Conta::obtemNumeroDeContas() {
+    return numeroDeContas;
 }

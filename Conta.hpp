@@ -3,6 +3,7 @@
 
 class Conta {
 private:
+    static int numeroDeContas ;
     std::string numeroDaConta;
     std::string numCpf;
     std::string titular;
@@ -16,5 +17,6 @@ public:
     std::string obetemCpf() const;
     std::string obtemNumeroDaConta() const;
     float obtemSaldo() const;
+    static int obtemNumeroDeContas();
 };
 
