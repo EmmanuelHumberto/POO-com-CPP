@@ -1,42 +1,22 @@
-#include <iostream>
-#include <string>
+#include "Conta.cpp"
 
-struct Conta{
-    std::string numero;
-    std::string cpf;
-    std::string titular;
-    float saldo;
-
-    void depositar(float valorADepositar){
-        if(valorADepositar <= 0 ) {
-            std::cout << "Depositado não realizado!" << std::endl;
-            return;
-        }else{
-            saldo += valorADepositar;
-            std::cout << "Deposito realizado com sucesso" << std::endl;
-        }
-    }
-    void sacar(float valorASacar){
-        if(valorASacar < 0 ) {
-            std::cout << "Valor negativo não pode ser sacado!" << std::endl;
-            return;
-        }
-        else if(valorASacar > saldo ){
-            std::cout << "Saldo insuficiente!" << std::endl;
-            return;
-        }else{
-            saldo -= valorASacar;
-            std::cout << "Saque realizado com sucesso" << std::endl;
-        }
-    }
-};
 
 int main(){
  Conta umaConta;
- umaConta.numero ="23";
- umaConta.cpf ="123.456.789-78";
- umaConta.saldo = 2000;
- umaConta.depositar( 10000);
- std::cout << " O saldo da conta é: " <<  umaConta.saldo <<  std::endl;
+
+umaConta.editarNomeTitular("Emmanuel");
+umaConta.editaCpf("123.446.741.56");
+umaConta.editaNumeroDaConta("12354");
+umaConta.depositar(3000);
+umaConta.sacar(500);
+
+
+
+
+std::cout << " O saldo da conta é: " <<  umaConta.obtemSaldo() <<  std::endl;
+std::cout << " Nome titular: " << umaConta.obtemNomeTitular() <<  std::endl;
+std::cout << " O numero da conta é: " <<  umaConta.obtemNumeroDaConta() <<  std::endl;
+std::cout << " O numero do CPF é: " <<  umaConta.obetemCpf() <<  std::endl;
+
  return 0;
 }

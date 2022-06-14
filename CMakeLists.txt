@@ -3,5 +3,4 @@ project(OOP_CpulsPlus)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(OOP_CpulsPlus
-        main.cpp)
+add_executable(OOP_CpulsPlus main.cpp)
