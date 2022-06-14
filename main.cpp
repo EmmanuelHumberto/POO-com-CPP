@@ -1,31 +1,22 @@
 #include "Conta.cpp"
-
+#include "Titular.cpp"
+#include <string>
+#include <iostream>
 
 int main(){
 
-Conta tresConta(
-            "1213",
-            "12346578978",
-            "Daisy");
+Conta duasconta("1234", Titular("Emmanuel", "123.456.798-78"));
 
-Conta duasConta(
-            "1213",
-            "12346578978",
-            "Daisy");
+Titular cliente ("Humberto", "123.456.798-88");
+Conta umaconta("1274", cliente);
 
-Conta umaConta(
-        "1213",
-        "12346578978",
-        "Daisy");
+umaconta.depositar(5000);
+umaconta.sacar(1500);
 
-umaConta.depositar(1000);
-umaConta.sacar(500);
-
-std::cout << " O saldo da conta é: " <<  umaConta.obtemSaldo() <<  std::endl;
-std::cout << " Nome titular: " << umaConta.obtemNomeTitular() <<  std::endl;
-std::cout << " O numero da conta é: " <<  umaConta.obtemNumeroDaConta() <<  std::endl;
-std::cout << " O numero do CPF é: " <<  umaConta.obetemCpf() <<  std::endl;
-std::cout << " O numero de contas é: " << Conta::obtemNumeroDeContas() <<  std::endl;
+std::cout << "Cpf titular: " << cliente.obetemCpf() << std::endl;
+std::cout << "Nome titular: " << cliente.obtemNomeTitular() << std::endl;
+std::cout << "Nunero da conta: " << umaconta.obtemNumeroDaConta() << std::endl;
+std::cout << "Saldo da conta: "  << umaconta.obtemSaldo() <<std::endl;
 
  return 0;
 }
