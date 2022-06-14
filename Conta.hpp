@@ -8,14 +8,13 @@ private:
     std::string titular;
     float saldo;
 public:
+    Conta() = delete;
+    Conta(std::string numeroDaConta, std::string numCpf, std::string titula);
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
-    float obtemSaldo();
-    void editarNomeTitular(std::string nome);
-    void editaNumeroDaConta(std::string numero);
-    void editaCpf(std::string cpf);
-    std::string obtemNomeTitular();
-    std::string obetemCpf();
-    std::string obtemNumeroDaConta();
+    std::string obtemNomeTitular() const;
+    std::string obetemCpf() const;
+    std::string obtemNumeroDaConta() const;
+    float obtemSaldo() const;
 };
 

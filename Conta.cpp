@@ -1,46 +1,44 @@
 #include "Conta.hpp"
 #include <iostream>
 
-void Conta::sacar(float valorASacar ) {
+Conta::Conta( std::string numeroDaConta, std::string numCpf, std::string titular ):
+    numeroDaConta(numeroDaConta),
+    numCpf(numCpf),
+    titular(titular),
+    saldo(0) {
+}
+
+void Conta::sacar( float valorASacar ) {
     if(valorASacar < 0 ) {
         std::cout << "Valor negativo não pode ser sacado!" << std::endl;
         return;
     }
-    else if(valorASacar > saldo ){
+    else if( valorASacar > saldo ){
         std::cout << "Saldo insuficiente!" << std::endl;
         return;
-    }else{
+    } else {
         saldo -= valorASacar;
         std::cout << "Saque realizado com sucesso" << std::endl;
     }
 }
-void Conta::depositar(float valorADepositar ) {
-    if(valorADepositar <= 0 ) {
+void Conta::depositar( float valorADepositar ) {
+    if( valorADepositar <= 0 ) {
         std::cout << "Depositado não realizado!" << std::endl;
         return;
-    }else{
+    } else {
         saldo += valorADepositar;
         std::cout << "Deposito realizado com sucesso" << std::endl;
     }
 }
-float Conta::obtemSaldo() {
-    return  saldo;
+std::string Conta::obtemNumeroDaConta() const {
+    return numeroDaConta;
 }
-void Conta::editarNomeTitular(std::string nome) {
-    titular = nome;
-}
-void Conta::editaNumeroDaConta(std::string numero) {
-    numeroDaConta = numero;
-}
-void Conta::editaCpf(std::string cpf) {
-    numCpf = cpf;
-}
-std::string Conta::obtemNomeTitular() {
+std::string Conta::obtemNomeTitular() const {
     return titular;
 }
-std::string Conta::obetemCpf() {
+std::string Conta::obetemCpf() const {
     return numCpf;
 }
-std::string Conta::obtemNumeroDaConta() {
-    return numeroDaConta;
+float Conta::obtemSaldo() const {
+    return saldo;
 }
