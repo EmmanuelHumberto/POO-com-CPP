@@ -7,12 +7,6 @@ int main(){
 umaConta.editarNomeTitular("Emmanuel");
 umaConta.editaCpf("123.446.741.56");
 umaConta.editaNumeroDaConta("12354");
-umaConta.depositar(3000);
-umaConta.sacar(500);
-
-
-
-
 std::cout << " O saldo da conta é: " <<  umaConta.obtemSaldo() <<  std::endl;
 std::cout << " Nome titular: " << umaConta.obtemNomeTitular() <<  std::endl;
 std::cout << " O numero da conta é: " <<  umaConta.obtemNumeroDaConta() <<  std::endl;
